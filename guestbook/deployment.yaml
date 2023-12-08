@@ -18,5 +18,8 @@ spec:
         ports:
         - containerPort: 80
         env:
-          - name: KEY1
-            value: value1
+          - name: Cluster_Name
+            valueFrom:
+              secretKeyRef:
+                name: my_Cluster_Name
+                key: name
